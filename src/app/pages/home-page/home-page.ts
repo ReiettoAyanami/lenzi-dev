@@ -19,11 +19,13 @@ const REVEAL_SCENE: LenziScene = {
   name: 'Reveal',
   blobs: [],
   fleets: [
-    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 170, colonies: 4, size: 15, sizeVariety: 0.4 },
-    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 110, colonies: 4, size: 10, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 220, colonies: 4, size: 11, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 160, colonies: 4, size: 7, sizeVariety: 0.4 },
   ],
   // The pointer leaves them alone: a flock that fled the pointer would leave the words being read.
   follow: 'none',
+  // They go with the page as it scrolls, as if on it: the words never slide off them (lenzi, 19/11).
+  scroll: 1,
 };
 
 /** On a phone: fewer and smaller, the screen is narrow. */
@@ -31,10 +33,11 @@ const REVEAL_PHONE_SCENE: LenziScene = {
   name: 'Reveal on a phone',
   blobs: [],
   fleets: [
-    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 90, colonies: 4, size: 12, sizeVariety: 0.4 },
-    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 60, colonies: 4, size: 8, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 110, colonies: 4, size: 9, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 70, colonies: 4, size: 6, sizeVariety: 0.4 },
   ],
   follow: 'none',
+  scroll: 1,
 };
 
 @Component({
