@@ -15,16 +15,23 @@ import { LenziGather, LenziLiquidGlass, LenziScene, LenziSceneBackground, LenziS
  * "i boidi devono rimanere sulla zona di testo e spostarsi al prossimo scroll velocemente verso la nuova zona di
  * testo"): each block is a `lenziGather` zone.
  */
-/** The theme's primary (--mat-sys-primary): a fleet's colour is a hex, not a variable. */
+/** The theme's primary and tertiary (--mat-sys-primary, --mat-sys-tertiary): a fleet's colours are hexes, not variables. */
 const PRIMARY = '#d5baff';
+const TERTIARY = '#00dddd';
+
+/**
+ * The colours the drops shift among, each drop at its own place along the loop (lenzi, 19/11: "I colori ok, ma per
+ * ora falli cambiare un po' di più"): the violet, then towards the cyan and back.
+ */
+const COLOURS = [PRIMARY, TERTIARY, PRIMARY];
 
 /** Small and many (lenzi, 19/11: "Rendili più piccoli e più frequenti"), so they melt into one cover under every line. */
 const REVEAL_SCENE: LenziScene = {
   name: 'Reveal',
   blobs: [],
   fleets: [
-    { kind: 'blob-boid', material: 'lamp', colour: PRIMARY, count: 220, colonies: 4, size: 11, sizeVariety: 0.4 },
-    { kind: 'blob-boid', material: 'lamp', colour: PRIMARY, count: 160, colonies: 4, size: 7, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'lamp', colours: COLOURS, count: 220, colonies: 4, size: 11, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'lamp', colours: COLOURS, count: 160, colonies: 4, size: 7, sizeVariety: 0.4 },
   ],
   // The pointer leaves them alone: a flock that fled the pointer would leave the words being read.
   follow: 'none',
@@ -37,8 +44,8 @@ const REVEAL_PHONE_SCENE: LenziScene = {
   name: 'Reveal on a phone',
   blobs: [],
   fleets: [
-    { kind: 'blob-boid', material: 'lamp', colour: PRIMARY, count: 110, colonies: 4, size: 9, sizeVariety: 0.4 },
-    { kind: 'blob-boid', material: 'lamp', colour: PRIMARY, count: 70, colonies: 4, size: 6, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'lamp', colours: COLOURS, count: 110, colonies: 4, size: 9, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'lamp', colours: COLOURS, count: 70, colonies: 4, size: 6, sizeVariety: 0.4 },
   ],
   follow: 'none',
   space: 'page',
