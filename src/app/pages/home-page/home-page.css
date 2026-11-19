@@ -1,5 +1,4 @@
-/* The words are solid (lenziSolidText, the kit): the page's own colour, dark shapes over the glowing flock, their
-   shadow thrown towards the viewer; unseen elsewhere. */
+/* The words are solid (lenziSolidText, the kit): the page's own colour, dark shapes over the glowing flock. */
 .page {
   position: relative;
   box-sizing: border-box;
@@ -15,10 +14,15 @@
   align-content: center;
 }
 
+/* A glass window behind each block of words (lenziLit: the kit's glass, the flock blurred through it), with a panel's
+   border and corners (lenzi, 19/11: "dietro al testo metti delle finestre di vetro"). */
 .words {
   display: grid;
   gap: 16px;
   justify-self: start;
+  padding: 24px 32px;
+  border: var(--lenzi-border) solid var(--mat-sys-outline-variant);
+  border-radius: var(--lenzi-panel-radius);
 }
 
 .end .words {
