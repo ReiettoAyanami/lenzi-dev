@@ -1,14 +1,14 @@
 import { Component, DOCUMENT, computed, inject, signal } from '@angular/core';
 
-import { LenziGather, LenziLit, LenziScene, LenziSceneBackground, LenziSolidText } from '@lenzi/ui-kit/backgrounds';
+import { LenziGather, LenziLiquidGlass, LenziScene, LenziSceneBackground, LenziSolidText } from '@lenzi/ui-kit/backgrounds';
 
 /**
  * The reveal (lenzi, 2026-11-19: "la pagina e il testo devono avere lo stesso sfondo e il modo in cui si legge il
  * testo è che scrollando uno stormo di boidi ci passa dietro e rivela il testo", "solo materiale solido non
  * luminoso", then "rendi i boidi luminescenti"): the words are the page's own colour, so they cannot be seen on it; a
  * flock of glowing blob-boids flies behind the page, and where it passes under a word the word shows as a dark, solid
- * shape against the glow (lenziSolidText). Each block of words is a glass window over the flock (lenzi, 19/11: "dietro
- * al testo metti delle finestre di vetro": lenziLit), the glow blurred through it. The flock stays under the block of
+ * shape against the glow (lenziSolidText). Each block of words is a window of Liquid Glass over the flock (lenzi, 19/11:
+ * "dietro al testo metti delle finestre di vetro", then "quasi come il liquid glass di IOS": lenziLiquidGlass). The flock stays under the block of
  * text the window shows most of, all of it, and hurries to the next one when the page scrolls there (lenzi, 19/11:
  * "i boidi devono rimanere sulla zona di testo e spostarsi al prossimo scroll velocemente verso la nuova zona di
  * testo"): each block is a `lenziGather` zone.
@@ -44,7 +44,7 @@ const REVEAL_PHONE_SCENE: LenziScene = {
 
 @Component({
   selector: 'app-home-page',
-  imports: [LenziGather, LenziLit, LenziSceneBackground, LenziSolidText],
+  imports: [LenziGather, LenziLiquidGlass, LenziSceneBackground, LenziSolidText],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',
 })

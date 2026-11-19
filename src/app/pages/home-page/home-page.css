@@ -14,15 +14,14 @@
   align-content: center;
 }
 
-/* A glass window behind each block of words (lenziLit: the kit's glass, the flock blurred through it), with a panel's
-   border and corners (lenzi, 19/11: "dietro al testo metti delle finestre di vetro"). */
+/* A window of Liquid Glass behind each block of words (lenziLiquidGlass: clear, the flock bent near its edge, no border
+   but a rim of light; lenzi, 19/11: "quasi come il liquid glass di IOS"), with round corners. */
 .words {
   display: grid;
   gap: 16px;
   justify-self: start;
   padding: 24px 32px;
-  border: var(--lenzi-border) solid var(--mat-sys-outline-variant);
-  border-radius: var(--lenzi-panel-radius);
+  border-radius: var(--lenzi-widget-radius);
 }
 
 .end .words {
