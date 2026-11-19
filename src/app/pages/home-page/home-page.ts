@@ -1,6 +1,6 @@
 import { Component, DOCUMENT, computed, inject, signal } from '@angular/core';
 
-import { BlobShapeName, LenziGather, LenziLiquidGlass, LenziScene, LenziSceneBackground, LenziSolidText } from '@lenzi/ui-kit/backgrounds';
+import { LenziGather, LenziLiquidGlass, LenziScene, LenziSceneBackground, LenziSolidText } from '@lenzi/ui-kit/backgrounds';
 
 /**
  * The reveal (lenzi, 2026-11-19: "la pagina e il testo devono avere lo stesso sfondo e il modo in cui si legge il
@@ -25,19 +25,14 @@ const TERTIARY = '#00dddd';
  */
 const COLOURS = [PRIMARY, TERTIARY, PRIMARY];
 
-/**
- * Flowers instead of drops, each its own at random (lenzi, 19/11: "a forma di fiore ... tipo cookie o sun o burst"): the
- * shapes with the deepest lobes, so they read at a drop's size through its glow.
- */
-const FLOWERS: BlobShapeName[] = ['flower', 'sunny', 'burst', 'clover8', 'cookie6'];
 
-/** Small and many (lenzi, 19/11: "Rendili più piccoli e più frequenti"), so they melt into one cover under every line. */
+/** Drops, small and many (lenzi, 19/11: "Rendili più piccoli e più frequenti"; "i boidi tienili come prima, più piccoli ancora"). */
 const REVEAL_SCENE: LenziScene = {
   name: 'Reveal',
   blobs: [],
   fleets: [
-    { kind: 'blob-boid', material: 'lamp', colours: COLOURS, shapes: FLOWERS, count: 200, colonies: 4, size: 15, sizeVariety: 0.4 },
-    { kind: 'blob-boid', material: 'lamp', colours: COLOURS, shapes: FLOWERS, count: 140, colonies: 4, size: 10, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'lamp', colours: COLOURS, count: 260, colonies: 4, size: 8, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'lamp', colours: COLOURS, count: 200, colonies: 4, size: 5, sizeVariety: 0.4 },
   ],
   // The pointer leaves them alone: a flock that fled the pointer would leave the words being read.
   follow: 'none',
@@ -50,8 +45,8 @@ const REVEAL_PHONE_SCENE: LenziScene = {
   name: 'Reveal on a phone',
   blobs: [],
   fleets: [
-    { kind: 'blob-boid', material: 'lamp', colours: COLOURS, shapes: FLOWERS, count: 100, colonies: 4, size: 12, sizeVariety: 0.4 },
-    { kind: 'blob-boid', material: 'lamp', colours: COLOURS, shapes: FLOWERS, count: 60, colonies: 4, size: 8, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'lamp', colours: COLOURS, count: 120, colonies: 4, size: 6, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'lamp', colours: COLOURS, count: 80, colonies: 4, size: 4, sizeVariety: 0.4 },
   ],
   follow: 'none',
   space: 'page',
