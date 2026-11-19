@@ -8,7 +8,9 @@ import { LenziGather, LenziLiquidGlass, LenziScene, LenziSceneBackground, LenziS
  * luminoso", then "rendi i boidi luminescenti"): the words are the page's own colour, so they cannot be seen on it; a
  * flock of glowing blob-boids flies behind the page, and where it passes under a word the word shows as a dark, solid
  * shape against the glow (lenziSolidText). Each block of words is a window of Liquid Glass over the flock (lenzi, 19/11:
- * "dietro al testo metti delle finestre di vetro", then "quasi come il liquid glass di IOS": lenziLiquidGlass). The flock stays under the block of
+ * "dietro al testo metti delle finestre di vetro", then "quasi come il liquid glass di IOS": lenziLiquidGlass).
+ * The flock gathers under the whole window, spilling a little past it ("voglio che i boidi siano sulla forma delle
+ * finestra di vetro non del testo. inoltre falli anche uscire un pochino": gatherTo box, gatherSpill). The flock stays under the block of
  * text the window shows most of, all of it, and hurries to the next one when the page scrolls there (lenzi, 19/11:
  * "i boidi devono rimanere sulla zona di testo e spostarsi al prossimo scroll velocemente verso la nuova zona di
  * testo"): each block is a `lenziGather` zone.
