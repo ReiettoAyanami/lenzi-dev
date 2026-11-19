@@ -14,12 +14,13 @@ import { LenziGather, LenziScene, LenziSceneBackground } from '@lenzi/ui-kit/bac
 /** The theme's primary (--mat-sys-primary): a fleet's colour is a hex, not a variable. */
 const PRIMARY = '#d5baff';
 
+/** Small and many (lenzi, 19/11: "Rendili più piccoli e più frequenti"), so they melt into one cover under every line. */
 const REVEAL_SCENE: LenziScene = {
   name: 'Reveal',
   blobs: [],
   fleets: [
-    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 60, colonies: 4, size: 24, sizeVariety: 0.5 },
-    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 40, colonies: 3, size: 14, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 170, colonies: 4, size: 15, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 110, colonies: 4, size: 10, sizeVariety: 0.4 },
   ],
   // The pointer leaves them alone: a flock that fled the pointer would leave the words being read.
   follow: 'none',
@@ -30,8 +31,8 @@ const REVEAL_PHONE_SCENE: LenziScene = {
   name: 'Reveal on a phone',
   blobs: [],
   fleets: [
-    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 24, colonies: 3, size: 18, sizeVariety: 0.5 },
-    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 16, colonies: 2, size: 11, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 90, colonies: 4, size: 12, sizeVariety: 0.4 },
+    { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 60, colonies: 4, size: 8, sizeVariety: 0.4 },
   ],
   follow: 'none',
 };
