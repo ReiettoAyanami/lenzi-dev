@@ -1,0 +1,51 @@
+/* The words are the page's own colour: they show only where the flock passes behind them. */
+.page {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+  color: var(--mat-sys-surface);
+}
+
+/* Each zone of text a screen tall, so scrolling carries it over the flock. */
+.zone {
+  min-height: 100svh;
+  display: grid;
+  align-content: center;
+  gap: 16px;
+}
+
+.end {
+  justify-items: end;
+  text-align: end;
+}
+
+.name {
+  margin: 0;
+  font: var(--mat-sys-display-large);
+  font-size: clamp(64px, 14vw, 160px);
+  line-height: 1;
+}
+
+.line,
+.heading {
+  margin: 0;
+  font: var(--mat-sys-display-small);
+}
+
+.text {
+  margin: 0;
+  max-width: 28ch;
+  font: var(--mat-sys-headline-medium);
+}
+
+@media (max-width: 599px) {
+  .page {
+    padding: 0 16px;
+  }
+
+  .text {
+    font: var(--mat-sys-headline-small);
+  }
+}
