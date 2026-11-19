@@ -21,6 +21,8 @@ const REVEAL_SCENE: LenziScene = {
   ],
   // The pointer leaves them alone: a flock that fled the pointer would leave the words being read.
   follow: 'none',
+  // Scrolling carries the flock up with the words, half as far: it lags behind them, so they pass over it.
+  scroll: 0.5,
 };
 
 /** On a phone: fewer and smaller, the screen is narrow. */
@@ -32,6 +34,7 @@ const REVEAL_PHONE_SCENE: LenziScene = {
     { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 16, colonies: 2, size: 11, sizeVariety: 0.4 },
   ],
   follow: 'none',
+  scroll: 0.5,
 };
 
 @Component({
