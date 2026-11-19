@@ -1,7 +1,1 @@
 /* The app's own global styles: the kit's come first (angular.json). */
-
-/* Magnetic scroll (lenzi, 2026-11-19: "Voglio che lo scroll sia magnetico quindi lo scroll ti porta automaticamente
-   ad una nuova zona di testo"): a page with zones (.snap-page) stops on one zone at a time. */
-html:has(.snap-page) {
-  scroll-snap-type: y mandatory;
-}

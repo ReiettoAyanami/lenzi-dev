@@ -24,8 +24,8 @@ const REVEAL_SCENE: LenziScene = {
   ],
   // The pointer leaves them alone: a flock that fled the pointer would leave the words being read.
   follow: 'none',
-  // They go with the page as it scrolls, as if on it: the words never slide off them (lenzi, 19/11).
-  scroll: 1,
+  // They live on the page, not on the window (lenzi, 19/11: "La posizione dei boidi non deve ignorare la pagina").
+  space: 'page',
 };
 
 /** On a phone: fewer and smaller, the screen is narrow. */
@@ -37,7 +37,7 @@ const REVEAL_PHONE_SCENE: LenziScene = {
     { kind: 'blob-boid', material: 'solid', colour: PRIMARY, count: 70, colonies: 4, size: 6, sizeVariety: 0.4 },
   ],
   follow: 'none',
-  scroll: 1,
+  space: 'page',
 };
 
 @Component({
