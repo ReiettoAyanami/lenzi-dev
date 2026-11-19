@@ -8,15 +8,21 @@
   color: var(--mat-sys-surface);
 }
 
-/* Each zone of text a screen tall, so scrolling carries it over the flock. */
+/* Each zone of text a screen tall, the words in the middle of it: the block of words is where the flock gathers. */
 .zone {
   min-height: 100svh;
   display: grid;
   align-content: center;
-  gap: 16px;
 }
 
-.end {
+.words {
+  display: grid;
+  gap: 16px;
+  justify-self: start;
+}
+
+.end .words {
+  justify-self: end;
   justify-items: end;
   text-align: end;
 }
