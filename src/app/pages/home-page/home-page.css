@@ -1,5 +1,5 @@
-/* The words are solid (.lenzi-solid-text, the kit): the page's own colour, dark shapes casting a shadow over the
-   glowing flock, unseen elsewhere. */
+/* The words are solid (lenziSolidText, the kit): the page's own colour, dark shapes over the glowing flock, their
+   shadow thrown towards the viewer; unseen elsewhere. */
 .page {
   position: relative;
   box-sizing: border-box;
