@@ -1,11 +1,11 @@
-/* The words are the page's own colour: they show only where the flock passes behind them. */
+/* The words are solid (.lenzi-solid-text, the kit): the page's own colour, dark shapes casting a shadow over the
+   glowing flock, unseen elsewhere. */
 .page {
   position: relative;
   box-sizing: border-box;
   max-width: 1040px;
   margin: 0 auto;
   padding: 0 24px;
-  color: var(--mat-sys-surface);
 }
 
 /* Each zone of text a screen tall, the words in the middle of it: the block of words is where the flock gathers. */
